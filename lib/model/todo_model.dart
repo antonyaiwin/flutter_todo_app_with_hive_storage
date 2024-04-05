@@ -14,7 +14,7 @@ class TodoModel {
 
   TodoModel({
     required this.title,
-    required this.isCompleted,
+    this.isCompleted = false,
     required this.category,
   });
 }
