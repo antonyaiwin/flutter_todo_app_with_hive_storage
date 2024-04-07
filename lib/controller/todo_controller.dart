@@ -7,6 +7,8 @@ class TodoController {
   static List<String> categoryList = ['Home', 'Work', 'Personal'];
   static var box = Hive.box<TodoModel>('todo');
 
+  static bool get isListEmpty => todoKeyList.isEmpty;
+
   static void initData() {
     todoKeyList = box.keys.toList();
   }
